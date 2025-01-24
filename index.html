@@ -5,6 +5,14 @@
     <link rel="icon" type="image/png" href="/assets/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chelsea - Best Restaurant</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const link = document.querySelector("link[rel='icon']");
+        if (link) {
+          link.href = "/logo.png"; 
+        }
+      });
+    </script>    
   </head>
   <body>
     <div id="root"></div>
