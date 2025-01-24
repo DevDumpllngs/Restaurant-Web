@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
-  // Cambiar opacidad del fondo al hacer scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -24,7 +23,7 @@ const Navbar = () => {
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled ? "bg-gray-900 shadow-lg" : "bg-gray-800"
       }`}
-      style={{ height: "65px" }} // Altura personalizada
+      style={{ height: "65px" }} 
     >
       <div className="container mx-auto flex justify-between items-center h-full">
         {/* Logo */}

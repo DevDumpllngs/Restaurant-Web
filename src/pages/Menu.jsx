@@ -118,7 +118,6 @@ const Menu = () => {
   };
 
   const handlePurchaseConfirmation = () => {
-    // Validate customer info
     if (!customerInfo.name || !customerInfo.phone || !customerInfo.creditCard) {
       alert('Por favor complete todos los campos');
       return;
@@ -127,7 +126,6 @@ const Menu = () => {
     setIsModalOpen(false);
     setIsOrderCompleteOpen(true);
     
-    // Reset after 3 seconds
     setTimeout(() => {
       setIsOrderCompleteOpen(false);
       setSelectedDishes([]);
@@ -142,10 +140,10 @@ const Menu = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: "spring", stiffness: 60 }}
-        className="w-3/4 h-[85vh] bg-white rounded-3xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden" // Contenedor de platillos con altura y ancho específicos
+        className="w-3/4 h-[85vh] bg-white rounded-3xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden" 
       >
         {/* Section Navigation */}
-        <div className="flex border-b border-emerald-100 px-4 space-x-4 mt-2"> {/* Ajusté el margen superior para los botones */}
+        <div className="flex border-b border-emerald-100 px-4 space-x-4 mt-2"> 
           {sections.map((section) => (
             <button
               key={section.name}
@@ -154,7 +152,7 @@ const Menu = () => {
                 selectedSection === section.name 
                   ? 'bg-emerald-100 text-emerald-700' 
                   : 'text-gray-500 hover:bg-gray-50 hover:text-emerald-500'
-              }`} // Botones más pequeños, separados y con bordes redondeados
+              }`}
             >
               <span>{section.emoji}</span>
               <span>{section.name.split(' ')[0]}</span>
@@ -219,7 +217,7 @@ const Menu = () => {
   initial={{ opacity: 0, x: 50 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ type: "spring", stiffness: 60 }}
-  className="w-1/4 h-[85vh] ml-8 bg-[#F5F5F4] rounded-3xl p-6 border border-gray-200 flex flex-col shadow-xl" // Contenedor de la orden con altura y ancho específicos
+  className="w-1/4 h-[85vh] ml-8 bg-[#F5F5F4] rounded-3xl p-6 border border-gray-200 flex flex-col shadow-xl" 
 >
   <h2 className="text-2xl font-light text-gray-800 border-b border-emerald-500 pb-4 mb-4 flex items-center">
     🛍️ Tu Orden
@@ -380,7 +378,7 @@ const Menu = () => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="bg-white rounded-lg shadow-xl p-8 relative max-w-2xl w-full" // Hice el modal más grande
+              className="bg-white rounded-lg shadow-xl p-8 relative max-w-2xl w-full" 
             >
               <button 
                 onClick={closeDishModal} 
