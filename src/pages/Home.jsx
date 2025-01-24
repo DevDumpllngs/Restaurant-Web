@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import banner from "../assets/banner.jpeg";
 import dish1 from "../assets/dish1.jpeg";
 import dish2 from "../assets/dish2.jpeg";
@@ -7,6 +8,7 @@ import dish4 from "../assets/dish4.jpeg";
 
 const Home = () => {
   const dishes = [dish1, dish2, dish3, dish4];
+  const navigate = useNavigate(); // Hook de navegación
 
   return (
     <div
@@ -31,10 +33,16 @@ const Home = () => {
 
         {/* Buttons */}
         <div className="flex space-x-4 mb-8">
-          <button className="border border-white text-white py-3 px-8 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all duration-300">
+          <button
+            onClick={() => navigate('/contact')} // Redirección a Contact
+            className="border border-white text-white py-3 px-8 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all duration-300"
+          >
             Book a Table
           </button>
-          <button className="border border-white text-white py-3 px-8 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all duration-300">
+          <button
+            onClick={() => navigate('/menu')} // Redirección a Menu
+            className="border border-white text-white py-3 px-8 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-all duration-300"
+          >
             View Menu
           </button>
         </div>
