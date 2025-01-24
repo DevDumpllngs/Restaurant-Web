@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import About from "./pages/About";
@@ -10,10 +9,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="flex flex-col min-h-screen overflow-hidden">
-        {/* Navbar */}
         <Navbar />
-
-        {/* Main content */}
         <main className="flex-grow pt-16">
           <Routes>
             <Route path="/" element={<Home />} />
