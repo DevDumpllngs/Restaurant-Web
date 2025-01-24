@@ -1,50 +1,122 @@
-# React + TypeScript + Vite
+# Chelsea - Best Restaurant 🍴🍷
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido al repositorio de **Chelsea**, el mejor restaurante de experiencia culinaria. Aquí encontrarás todos los detalles necesarios para explorar y ejecutar el proyecto. ¡Gracias por tu interés! 🎉
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Demo en Vivo
+👉 [Visita el sitio aquí](https://devdumpllngs.github.io/Restaurant-Web/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Tecnologías Usadas
+- **React** ⚛️
+- **Vite** 🚀
+- **Tailwind CSS** 🎨
+- **Framer Motion** ✨ (para animaciones)
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Cómo Ejecutar el Proyecto en Local
+
+Sigue estos pasos para desplegar el proyecto en tu entorno local:
+
+### 1. Clona este repositorio
+```bash
+git clone https://github.com/DevDumpllngs/Restaurant-Web.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Ingresa al directorio del proyecto
+```bash
+cd Restaurant-Web
 ```
+
+### 3. Instala las dependencias
+Asegúrate de tener **Node.js** y **npm** instalados en tu sistema.
+```bash
+npm install
+```
+
+### 4. Ejecuta el servidor de desarrollo
+```bash
+npm run dev
+```
+
+El proyecto estará disponible en: `http://localhost:5173`
+
+---
+
+## 🧳 Despliegue
+
+Para generar los archivos para producción, ejecuta:
+```bash
+npm run build
+```
+
+Los archivos compilados se encontrarán en la carpeta `dist`. Puedes subir esta carpeta a cualquier servicio de hosting como:
+- **Netlify** 🌐
+- **Vercel** ⚡
+- **GitHub Pages** 📄
+
+---
+
+## 📂 Estructura del Proyecto
+
+```plaintext
+├── dist/            # Archivos generados para producción
+├── node_modules/    # Dependencias instaladas por npm
+├── public/          # Archivos estáticos (favicon, imágenes públicas)
+│   └── logo.png     # Ícono del proyecto
+├── src/             # Código fuente principal
+│   ├── assets/      # Imágenes y recursos
+│   │   ├── banner.jpeg
+│   │   ├── chef.jpeg
+│   │   ├── chelsea.webp
+│   │   ├── dish1.jpeg
+│   │   ├── dish2.jpeg
+│   │   ├── dish3.jpeg
+│   │   ├── dish4.jpeg
+│   │   ├── logo.png
+│   │   └── restaurant.jpeg
+│   ├── components/  # Componentes reutilizables
+│   │   └── Navbar.jsx
+│   ├── pages/       # Vistas principales
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Home.jsx
+│   │   └── Menu.jsx
+│   ├── App.jsx      # Punto de entrada de la aplicación
+│   ├── App.css      # Estilos globales
+│   ├── index.css    # Configuración de estilos
+│   └── main.tsx     # Configuración principal de React y Vite
+├── .gitignore       # Archivos y carpetas ignorados por Git
+├── index.html       # Archivo HTML principal
+├── package.json     # Dependencias y scripts del proyecto
+├── tailwind.config.js # Configuración de Tailwind CSS
+└── vite.config.ts   # Configuración de Vite
+```
+
+---
+
+## 💡 Características del Proyecto
+
+- **Animaciones Interactivas**: Navega entre secciones con transiciones suaves. ✨
+- **Menú Dinámico**: Explora los platillos del menú con descripción y precios. 🍽️
+- **Reservaciones**: Opción para reservar mesas desde el sitio. 📅
+
+---
+
+## 📜 Notas Adicionales
+- Este proyecto fue diseñado con una estructura modular para facilitar su mantenimiento.
+- Si tienes problemas para desplegar o ejecutar el proyecto, no dudes en abrir un _issue_.
+
+---
+
+## 🧑‍💻 Autor
+Creado con ❤️ por [Dumpllngs](https://github.com/DevDumpllngs/)
+
+---
+
+## 📄 Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más información.
+
